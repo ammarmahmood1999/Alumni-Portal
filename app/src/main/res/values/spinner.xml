@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="category">
+        <item>Web Development</item>
+        <item>App Development</item>
+        <item>Desktop Development</item>
+        <item>Data Science</item>
+        <item>Business Analytics</item>
+        <item>Networking</item>
+    </string-array>
+</resources>

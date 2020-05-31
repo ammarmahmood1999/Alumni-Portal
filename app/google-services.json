@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "168371602068",
+    "firebase_url": "https://alumniportal-6c508.firebaseio.com",
+    "project_id": "alumniportal-6c508",
+    "storage_bucket": "alumniportal-6c508.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168371602068:android:85f136ba64d32faff46a81",
+        "android_client_info": {
+          "package_name": "com.nuces.alumniportal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "168371602068-qgt42rrsuvrdspnb1npjc0uri9098v4a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkP1Eedfoe23VStndaZYpLjzxEowrX-yo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "168371602068-qgt42rrsuvrdspnb1npjc0uri9098v4a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
