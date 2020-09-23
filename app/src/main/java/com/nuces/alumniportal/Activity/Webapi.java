@@ -38,7 +38,7 @@ public class Webapi extends AppCompatActivity {
         dialog = new SpotsDialog(Webapi.this);
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.1.114:45455/api/")
+                .baseUrl("http://192.168.1.108:45457//api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         OrganizationJasonPlaceHolderApi organizationJasonPlaceHolderApi = retrofit.create(OrganizationJasonPlaceHolderApi.class);

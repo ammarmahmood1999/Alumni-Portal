@@ -1,0 +1,82 @@
+﻿@model IEnumerable<FAST_Alumni_2020_Web_Portal.Models.JobPostFinal>
+
+
+
+<table class="table">
+    
+    @foreach (var item in Model)
+    {
+
+        <style>
+            .card {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                max-width: 600px;
+                margin: auto;
+                text-align: center;
+                font-family: arial;
+            }
+
+            .title {
+                color: grey;
+                font-size: 18px;
+            }
+
+            button {
+                border: none;
+                outline: 0;
+                display: inline-block;
+                padding: 8px;
+                color: white;
+                background-color: #000;
+                text-align: center;
+                cursor: pointer;
+                width: 100%;
+                font-size: 18px;
+            }
+            hr.style1{
+                border-top: 1px solid #8c8b8b;
+            }
+            a {
+                text-decoration: none;
+                font-size: 22px;
+                color: black;
+            }
+
+                button:hover, a:hover {
+                    opacity: 0.7;
+                }
+        </style>
+
+
+        <div class="card">
+            <div name="card_">
+                <a href="">
+                    <img src="~/Content/Images/fast_banner.png" alt="John" style="width: 100%">
+                </a>
+            </div>
+            <h1> @Html.DisplayFor(modelItem => item.title)</h1>
+            <h1 class="title">Organization Name: @Html.DisplayFor(modelItem => item.OrganizationName)</h1>
+            <p>@Html.DisplayFor(modelItem => item.description)</p>
+            <p>@Html.DisplayFor(modelItem => item.skils)</p>
+            @*<div style="margin: 24px 0;">
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+            </div>*@
+            <p>
+                <button type="button" class="btn-danger">
+                    <span>
+                        @Html.ActionLink("Organization Details", "Details", "Organization", new {id = item.organizationId}, null)
+                    </span>
+
+                </button></p>
+            <p><button>Apply Now</button></p>
+            <br>
+        </div>
+        <br />
+    }
+
+</table>
+
+

@@ -1,0 +1,42 @@
+﻿@model FAST_Alumni_2020_Web_Portal.Models.AlumniLogin
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+
+        <link href="~/Content/MyStyleSheet.css" rel="stylesheet" />
+        <div class="login-box">
+            <h2>Login </h2>
+            <form>
+                <div class="user-box">
+                    @Html.EditorFor(model => model.username, new { htmlAttributes = new { @class = "form-control" } })
+                    <label>Username</label>
+                </div>
+                <div class="user-box">
+                    @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "form-control" } })
+                    <label>Password</label>
+                </div>
+
+                <br />
+                <a>
+                    <input type="submit" value="Post Job" class="user-box" />
+                </a>
+            </form>
+        </div>
+
+    }
+
+
+    </body>
+</html>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IPT2020Model3StoreContainer" CdmEntityContainer="IPT2020Entities5">
+    <EntitySetMapping Name="Applicants">
+      <EntityTypeMapping TypeName="IPT2020Model3.Applicant">
+        <MappingFragment StoreEntitySet="Applicant">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="resumeLink" ColumnName="resumeLink" />
+          <ScalarProperty Name="studentId" ColumnName="studentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

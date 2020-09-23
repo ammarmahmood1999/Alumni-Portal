@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IPT2020Model2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="job_posting">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="10" />
+    <Property Name="description" Type="varchar" MaxLength="100" />
+    <Property Name="skils" Type="varchar" MaxLength="100" />
+    <Property Name="experience" Type="int" />
+    <Property Name="organizationId" Type="int" />
+    <Property Name="alumniId" Type="int" />
+  </EntityType>
+  <EntityContainer Name="IPT2020Model2StoreContainer">
+    <EntitySet Name="job_posting" EntityType="Self.job_posting" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

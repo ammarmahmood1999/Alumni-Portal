@@ -17,11 +17,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity.Webapi"></activity>
+        <activity android:name=".Activity.Webapi"/>
         <activity android:name=".Activity.ForgotPassActivity" />
         <activity android:name=".Activity.SplashActivity" />
         <activity android:name=".Activity.AboutActivity" />
-        />
         <activity
             android:name=".Activity.IntroActivity"
             android:theme="@style/MyTheme">

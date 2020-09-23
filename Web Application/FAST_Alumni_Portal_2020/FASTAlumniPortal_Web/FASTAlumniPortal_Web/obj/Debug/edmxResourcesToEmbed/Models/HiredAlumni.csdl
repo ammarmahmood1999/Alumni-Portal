@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IPT2020Model1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="hired_alumni">
+    <Key>
+      <PropertyRef Name="alumni_id" />
+      <PropertyRef Name="organization_id" />
+      <PropertyRef Name="job_id" />
+    </Key>
+    <Property Name="alumni_id" Type="Int32" Nullable="false" />
+    <Property Name="organization_id" Type="Int32" Nullable="false" />
+    <Property Name="job_id" Type="Int32" Nullable="false" />
+    <Property Name="organizational_email" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="date_hired" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityContainer Name="IPT2020Entities3" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="hired_alumni" EntityType="Self.hired_alumni" />
+  </EntityContainer>
+</Schema>

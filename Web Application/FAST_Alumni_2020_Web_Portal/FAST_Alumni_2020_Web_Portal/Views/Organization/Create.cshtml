@@ -1,0 +1,38 @@
+﻿@using FAST_Alumni_2020_Web_Portal.Models
+@model FAST_Alumni_2020_Web_Portal.Models.Organization
+
+@using (Html.BeginForm())
+{
+    <link href="~/Content/MyStyleSheet.css" rel="stylesheet" />
+    <div class="login-box">
+        <h2>Create Organization</h2>
+        <form>
+            <div class="user-box">
+                @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control" } })
+                <label>Name</label>
+            </div>
+            <div class="user-box">
+                @Html.EditorFor(model => model.location, new { htmlAttributes = new { @class = "form-control" } })
+                <label>Location</label>
+            </div>
+            <div class="user-box">
+                @Html.EditorFor(model => model.city, new { htmlAttributes = new { @class = "form-control" } })
+                <label>city</label>
+            </div>
+            <div class="user-box">
+                @Html.EditorFor(model => model.country, new { htmlAttributes = new { @class = "form-control" } })
+                <label>Country</label>
+            </div>
+            <div class="user-box">
+                @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
+                <label>Email</label>
+            </div>
+            
+            <br />
+            <a>
+                <input type="submit" value="Create Organization" class="user-box" />
+            </a>
+        </form>
+    </div>
+    @*</div>*@
+}

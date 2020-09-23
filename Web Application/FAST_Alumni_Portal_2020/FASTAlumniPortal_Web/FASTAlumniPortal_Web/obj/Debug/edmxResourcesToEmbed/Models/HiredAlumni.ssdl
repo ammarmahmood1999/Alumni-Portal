@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IPT2020Model1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'IPT2020.dbo.hired_alumni' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="hired_alumni">
+    <Key>
+      <PropertyRef Name="alumni_id" />
+      <PropertyRef Name="organization_id" />
+      <PropertyRef Name="job_id" />
+    </Key>
+    <Property Name="alumni_id" Type="int" Nullable="false" />
+    <Property Name="organization_id" Type="int" Nullable="false" />
+    <Property Name="job_id" Type="int" Nullable="false" />
+    <Property Name="organizational_email" Type="varchar" MaxLength="1" />
+    <Property Name="date_hired" Type="date" />
+  </EntityType>
+  <EntityContainer Name="IPT2020Model1StoreContainer">
+    <EntitySet Name="hired_alumni" EntityType="Self.hired_alumni" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [hired_alumni].[alumni_id] AS [alumni_id], 
+    [hired_alumni].[organization_id] AS [organization_id], 
+    [hired_alumni].[job_id] AS [job_id], 
+    [hired_alumni].[organizational_email] AS [organizational_email], 
+    [hired_alumni].[date_hired] AS [date_hired]
+    FROM [dbo].[hired_alumni] AS [hired_alumni]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

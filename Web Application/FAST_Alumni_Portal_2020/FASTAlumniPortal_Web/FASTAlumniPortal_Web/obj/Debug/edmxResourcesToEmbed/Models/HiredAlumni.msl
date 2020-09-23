@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IPT2020Model1StoreContainer" CdmEntityContainer="IPT2020Entities3">
+    <EntitySetMapping Name="hired_alumni">
+      <EntityTypeMapping TypeName="IPT2020Model1.hired_alumni">
+        <MappingFragment StoreEntitySet="hired_alumni">
+          <ScalarProperty Name="alumni_id" ColumnName="alumni_id" />
+          <ScalarProperty Name="organization_id" ColumnName="organization_id" />
+          <ScalarProperty Name="job_id" ColumnName="job_id" />
+          <ScalarProperty Name="organizational_email" ColumnName="organizational_email" />
+          <ScalarProperty Name="date_hired" ColumnName="date_hired" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

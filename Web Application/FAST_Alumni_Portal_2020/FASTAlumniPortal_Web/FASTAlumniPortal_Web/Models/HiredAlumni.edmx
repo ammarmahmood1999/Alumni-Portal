@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="IPT2020Model1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'IPT2020.dbo.hired_alumni' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="hired_alumni">
+          <Key>
+            <PropertyRef Name="alumni_id" />
+            <PropertyRef Name="organization_id" />
+            <PropertyRef Name="job_id" />
+          </Key>
+          <Property Name="alumni_id" Type="int" Nullable="false" />
+          <Property Name="organization_id" Type="int" Nullable="false" />
+          <Property Name="job_id" Type="int" Nullable="false" />
+          <Property Name="organizational_email" Type="varchar" MaxLength="1" />
+          <Property Name="date_hired" Type="date" />
+        </EntityType>
+        <EntityContainer Name="IPT2020Model1StoreContainer">
+          <EntitySet Name="hired_alumni" EntityType="Self.hired_alumni" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [hired_alumni].[alumni_id] AS [alumni_id], 
+    [hired_alumni].[organization_id] AS [organization_id], 
+    [hired_alumni].[job_id] AS [job_id], 
+    [hired_alumni].[organizational_email] AS [organizational_email], 
+    [hired_alumni].[date_hired] AS [date_hired]
+    FROM [dbo].[hired_alumni] AS [hired_alumni]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="IPT2020Model1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="hired_alumni">
+          <Key>
+            <PropertyRef Name="alumni_id" />
+            <PropertyRef Name="organization_id" />
+            <PropertyRef Name="job_id" />
+          </Key>
+          <Property Name="alumni_id" Type="Int32" Nullable="false" />
+          <Property Name="organization_id" Type="Int32" Nullable="false" />
+          <Property Name="job_id" Type="Int32" Nullable="false" />
+          <Property Name="organizational_email" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="date_hired" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityContainer Name="IPT2020Entities3" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="hired_alumni" EntityType="Self.hired_alumni" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="IPT2020Model1StoreContainer" CdmEntityContainer="IPT2020Entities3">
+          <EntitySetMapping Name="hired_alumni">
+            <EntityTypeMapping TypeName="IPT2020Model1.hired_alumni">
+              <MappingFragment StoreEntitySet="hired_alumni">
+                <ScalarProperty Name="alumni_id" ColumnName="alumni_id" />
+                <ScalarProperty Name="organization_id" ColumnName="organization_id" />
+                <ScalarProperty Name="job_id" ColumnName="job_id" />
+                <ScalarProperty Name="organizational_email" ColumnName="organizational_email" />
+                <ScalarProperty Name="date_hired" ColumnName="date_hired" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
